@@ -1,0 +1,6 @@
+<div>
+    @for (product of products(); track product) {
+        <app-product [title]="product.title" [description]="product.description" [image]="product.image"  />
+        }
+    
+</div>
