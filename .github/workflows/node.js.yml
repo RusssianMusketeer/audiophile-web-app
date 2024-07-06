@@ -1,11 +1,9 @@
-name: Angular Build
+name: Angular Build and Deploy
 
-# {1}
 on:
   push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
+    branches:
+      - master
 
 jobs:
   build:
@@ -20,12 +18,12 @@ jobs:
           node-version: 20
 
       - name: Build Angular app to prod
-        working-directory: audiophile-web-app
+        working-directory: Audiophile-WebApp
         run: npm install && npm run build:prod
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: audiophile-web-app/dist/browser
-          branch: prod
+          folder: Audiophile-WebApp/dist/browser
+          branch: prod  
           token: ${{ secrets.GH_TOKEN }}
