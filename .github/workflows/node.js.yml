@@ -35,5 +35,13 @@ jobs:
       - name: Run tests
         run: npm run test:ci
       # {6}
-      - name: Build
-        run: npm run build
+      - name: Build Angular app to prod
+        working-directory: github-option-three-app
+        run: npm install && npm run build:prod
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: audiophile-web-app/dist/browser
+          branch: prod  
+          token: ${{ secrets.GH_TOKEN }}
