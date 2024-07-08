@@ -1,0 +1,10 @@
+<div class="p-8 max-w-6xl my-20 mx-auto">
+    <div class="flex  justify-between">
+      @for (category of shoppingCategories; track category) {
+      <app-category-shopping
+        [title]="category.title"
+        [image]="category.image"
+      />
+      }
+    </div>
+  </div>

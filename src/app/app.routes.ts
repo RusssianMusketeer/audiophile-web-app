@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
 import { ListComponent } from './domains/products/pages/list/list.component';
 import { HomeComponent } from './domains/shared/pages/home/home.component';
+import { HeadphonesComponent } from './domains/products/pages/headphones/headphones.component';
+import { SpeakersComponent } from './domains/products/pages/speakers/speakers.component';
+import { EarphonesComponent } from './domains/products/pages/earphones/earphones.component';
 
 export const routes: Routes = [
   {
@@ -10,5 +13,17 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'headphones',
+    component: HeadphonesComponent,
+  },
+  {
+    path: 'speakers',
+    component: SpeakersComponent,
+  },
+  {
+    path: 'earphones',
+    component: EarphonesComponent,
   },
 ];

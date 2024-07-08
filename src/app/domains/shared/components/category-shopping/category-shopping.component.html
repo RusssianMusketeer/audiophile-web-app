@@ -1,6 +1,6 @@
 <div
   class="w-80 bg-grey hover:brightness-[0.92] hover:text-hover cursor-pointer transition-all h-44 text-center relative rounded-md"
->
+><a routerLink="/{{title.toLowerCase()}}">
   <img [src]="image" class="h-40 mx-auto relative -top-12" />
   <div class="relative -top-12">
     <h2 class="font-body text-black font-bold text-base tracking-wider mb-1">
@@ -13,4 +13,5 @@
       <img src="assets/shared/desktop/icon-arrow-right.svg" />
     </div>
   </div>
+</a>
 </div>

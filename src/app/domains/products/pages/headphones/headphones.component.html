@@ -1,0 +1,7 @@
+<app-header-name [title]="'HEADPHONES'"/>
+@for (headphone of headphones; track headphone; let index = $index) {
+    <app-product [title]="headphone.title" [description]="headphone.description" [image]="headphone.image" [index]="index"/>
+  }
+ <app-shopping-nav/>
+ <app-promotion/>
+

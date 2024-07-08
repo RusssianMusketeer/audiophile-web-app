@@ -20,16 +20,7 @@
       </div>
     </div>
   </div>
-  <div>
-    <div class="flex p-8 max-w-6xl mx-auto justify-between">
-      @for (category of shoppingCategories; track category) {
-      <app-category-shopping
-        [title]="category.title"
-        [image]="category.image"
-      />
-      }
-    </div>
-  </div>
+ <app-shopping-nav/>
   <div
     class="bg-accent px-8 pt-32 max-w-6xl mx-auto w-full bg-[url('assets/home/desktop/pattern-circles.svg')] bg-cover bg-[-12rem_-10rem] bg-no-repeat max-h-[40rem] rounded-md"
   >

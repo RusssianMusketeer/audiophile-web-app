@@ -1,12 +1,19 @@
-<div>
-    <div>
-        
+<div class="flex p-8 max-w-6xl mx-auto mb-12" [ngClass]="isOdd(index)">
+  <div class="flex-1">
+    <img class="rounded-md" [src]="image" />
+  </div>
+  <div class="flex-1 flex justify-center items-center">
+    <div class="w-[28rem]">
+      <p
+        class="text-hover font-body text-base tracking-[0.5em] font-normal mb-4"
+      >
+        NEW PRODUCT
+      </p>
+      <h2 class="text-black text-4xl font-body font-medium mb-6">
+        {{ title }}
+      </h2>
+      <p class="mb-4 font-body opacity-50 text-base">{{ description }}</p>
+      <app-button [title]="'SEE PRODUCT'" [color]="'#d87d4a'" />
     </div>
-    <div>
-        <p>NEW PRODUCT</p>
-        <h2>{{title}}</h2>
-        <p>{{description}}</p>
-        <img alt="imageAlt" [src]="image"/>
-        <button></button>
-    </div>
+  </div>
 </div>
