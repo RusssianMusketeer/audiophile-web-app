@@ -3,4 +3,6 @@ export interface Headphones {
     description: string;
     image: string;
     index: number | null;
+    link : string;
+    price: number;
 }

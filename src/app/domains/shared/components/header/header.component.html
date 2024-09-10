@@ -1,20 +1,25 @@
 <nav class="bg-light_black relative z-[2]">
   <div
-    class="flex font-body font-bold text-sm p-8 max-w-6xl mx-auto justify-between border-b border-solid border-[#4c4c4c]"
+    class="flex font-body font-bold text-sm py-8 max-w-6xl mx-12 xl:mx-auto justify-between border-b border-solid border-[#4c4c4c]"
   >
-    <div >
-      <a routerLink="">
-      <img src="assets/shared/desktop/logo.svg" />
-      </a>
-    </div>
     <div>
+      <div class="hidden xl:block">
+        <a routerLink="">
+          <img class="" src="assets/shared/desktop/logo.svg" />
+        </a>
+      </div>
+      <div class="block xl:hidden" (click)="showMenu()" >
+        <img class="cursor-pointer" src="assets/shared/tablet/icon-hamburger.svg" />
+      </div>
+    </div>
+    <div class="hidden xl:block">
       <ul class="text-white flex gap-x-8">
         <li>
           <a
-          class="hover:text-hover cursor-pointer transition-colors"
-          routerLink=""
-          >HOME</a
-        >
+            class="hover:text-hover cursor-pointer transition-colors"
+            routerLink=""
+            >HOME</a
+          >
         </li>
         <li>
           <a
@@ -39,8 +44,16 @@
         </li>
       </ul>
     </div>
+    <div class="block xl:hidden">
+      <a routerLink="">
+        <img class="" src="assets/shared/desktop/logo.svg" />
+      </a>
+    </div>
     <div>
       <img src="assets/shared/desktop/icon-cart.svg" />
     </div>
   </div>
 </nav>
+
+  <app-shopping-nav [ngClass]=" shown ? styleClassShown : styleClassNotShown " />
+  

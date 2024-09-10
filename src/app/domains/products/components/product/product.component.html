@@ -13,7 +13,9 @@
         {{ title }}
       </h2>
       <p class="mb-4 font-body opacity-50 text-base">{{ description }}</p>
+      <a routerLink="/{{link}}" [state]="product">
       <app-button [title]="'SEE PRODUCT'" [color]="'#d87d4a'" />
+    </a>
     </div>
   </div>
 </div>
