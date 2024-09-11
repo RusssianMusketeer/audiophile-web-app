@@ -12,18 +12,15 @@
         <h2 class="text-black text-4xl font-body font-medium mb-6">
           {{ state.title }}
         </h2>
-        <p class="mb-4 font-body opacity-50 text-base">{{ state.description }}</p>
-        <span class="mb-4"> {{ state.price }}</span>
-        <div class="flex">
+        <p class="mb-12 font-body opacity-50 text-base">{{ state.description }}</p>
+        <span class="text-lg"> {{ state.price }}</span>
+        <div class="flex mt-12">
             <div>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
             <app-button [title]="'ADD TO CART'" [color]="'#d87d4a'"/>
-
-            
-
         </div>
       </div>
     </div>
