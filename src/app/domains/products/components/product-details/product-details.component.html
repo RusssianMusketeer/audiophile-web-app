@@ -13,12 +13,12 @@
           {{ state.title }}
         </h2>
         <p class="mb-12 font-body opacity-50 text-base">{{ state.description }}</p>
-        <span class="text-lg"> {{ state.price }}</span>
+        <span class="text-lg font-semibold tracking-widest"> {{"$ " + state.price.toLocaleString() }}</span>
         <div class="flex mt-12">
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="bg-grey items-center justify-center flex w-40 mr-4">
+                <button class="px-4 opacity-30 hover:opacity-100 transition-opacity w-full h-full">-</button>
+                <span class="mx-4">0</span>
+                <button class="px-4 opacity-30 hover:opacity-100 transition-opacity w-full h-full">+</button>
             </div>
             <app-button [title]="'ADD TO CART'" [color]="'#d87d4a'"/>
         </div>
