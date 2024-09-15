@@ -9,4 +9,8 @@ export class CartService {
   cart = signal<Product[]>([]);
 
   constructor() { }
+
+  addToCart(product:Product) {
+    this.cart.update(state => [...state,product])
+  }
 }
