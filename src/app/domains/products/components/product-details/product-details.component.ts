@@ -30,7 +30,9 @@ export class ProductDetailsComponent {
    quantity = signal<number>(0)
 
    updateQuantity(item:number) {
+    if (item>= 0){
     this.quantity.update(number => item)
+    }
   }
 
   private cartService = inject(CartService);
