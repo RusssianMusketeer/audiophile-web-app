@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ShoppingNavComponent } from '../shopping-nav/shopping-nav.component';
 import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,11 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HeaderComponent {
 
   shown: boolean = false;
+  private cartService = inject(CartService);
+  cart = this.cartService.cart;
+  total = this.cartService.total;
+
+
 
   constructor ( private router:  Router ) {
     router.events.subscribe( () => ( this.shown = false ))}

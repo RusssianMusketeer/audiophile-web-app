@@ -23,13 +23,19 @@ export class ProductDetailsComponent {
     title:'',
     description:'',
     price:0,
-    image:''
+    image:'',
+    quantity:0
   }
 
    quantity = signal<number>(0)
 
+   updateQuantity(item:number) {
+    this.quantity.update(number => item)
+  }
+
   private cartService = inject(CartService);
   addToCart(product: Product) {
+    product.quantity = this.quantity()
     this.cartService.addToCart(product)
   }
 
