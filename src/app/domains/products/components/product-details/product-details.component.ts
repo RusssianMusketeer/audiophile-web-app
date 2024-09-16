@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, inject, signal } from '@angular/core';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { RouterLink } from '@angular/router';
 import { LocationStrategy } from '@angular/common';
@@ -25,6 +25,8 @@ export class ProductDetailsComponent {
     price:0,
     image:''
   }
+
+   quantity = signal<number>(0)
 
   private cartService = inject(CartService);
   addToCart(product: Product) {
