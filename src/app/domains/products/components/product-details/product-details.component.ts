@@ -1,8 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { RouterLink } from '@angular/router';
 import { LocationStrategy } from '@angular/common';
 import { StateProduct } from '../../../shared/models/productState.models';
+import { CartService } from '../../../shared/services/cart.service';
+import { Product } from '../../../shared/models/products.models';
 
 @Component({
   selector: 'app-product-details',
@@ -22,6 +24,11 @@ export class ProductDetailsComponent {
     description:'',
     price:0,
     image:''
+  }
+
+  private cartService = inject(CartService);
+  addToCart(product: Product) {
+    this.cartService.addToCart(product)
   }
 
   constructor(private location: LocationStrategy) {
