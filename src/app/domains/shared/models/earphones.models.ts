@@ -3,4 +3,6 @@ export interface Earphones {
     description: string;
     image: string;
     index: number | null;
+    link:string;
+    price: number;
 }
