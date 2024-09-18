@@ -3,4 +3,6 @@ export interface Speakers {
     description: string;
     image: string;
     index: number | null;
+    price:number;
+    link:string;
 }

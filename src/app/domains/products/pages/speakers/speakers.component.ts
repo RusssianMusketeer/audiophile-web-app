@@ -21,7 +21,9 @@ export class SpeakersComponent {
         'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.',
       image:
         'assets/speaker/product-zx9-speaker/desktop/image-category-page-preview.jpg',
-        index:null
+        index:null,
+        link: 'speakers/ZX9_SPEAKERS',
+        price:4500
     },
     {
       title: 'ZX7 SPEAKER',
@@ -29,7 +31,9 @@ export class SpeakersComponent {
         'Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.',
       image:
         'assets/speaker/product-zx7-speaker/desktop/image-category-page-preview.jpg',
-        index:null
+        index:null,
+        link: 'speakers/ZX7_SPEAKERS',
+        price:3500
     }
   ];
 

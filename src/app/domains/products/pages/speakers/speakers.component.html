@@ -1,6 +1,6 @@
 <app-header-name [title]="'SPEAKERS'"/>
 @for (speaker of speakers; track speaker; let index = $index) {
-    <app-product [title]="speaker.title" [description]="speaker.description" [image]="speaker.image" [index]="index"/>
+    <app-product [price]="speaker.price" [link]="speaker.link" [title]="speaker.title" [description]="speaker.description" [image]="speaker.image" [index]="index"/>
   }
  <app-shopping-nav/>
  <app-promotion/>
