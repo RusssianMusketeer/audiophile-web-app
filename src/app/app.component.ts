@@ -13,4 +13,5 @@ import { FooterComponent } from './domains/shared/components/footer/footer.compo
 })
 export class AppComponent {
   title = 'Audiophile-WebApp';
+  
 }
