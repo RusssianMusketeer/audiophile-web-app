@@ -24,7 +24,8 @@ export class ProductDetailsComponent {
     description:'',
     price:0,
     image:'',
-    quantity:0
+    quantity:0,
+    featureDescription:''
   }
 
    quantity = signal<number>(0)

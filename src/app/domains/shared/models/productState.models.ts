@@ -4,4 +4,5 @@ export interface StateProduct {
     image: string;
     price:number;
     quantity:number;
+    featureDescription:string;
 }
