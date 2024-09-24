@@ -18,6 +18,7 @@ export class ProductComponent {
   @Input() link: string = '';
   @Input() price: number | null = null;
   @Input() featureDescription:string = '';
+  @Input() boxMaterial:object = {};
 
   isOdd(index: number | null): string| null {
     if (index != null) {
@@ -28,7 +29,7 @@ export class ProductComponent {
   public product: object  = {}
   
   ngOnInit() {
-    this.product = { title: this.title ,featureDescription:this.featureDescription ,description: this.description, image:this.image, price:this.price }
+    this.product = { title: this.title, boxMaterial : this.boxMaterial ,featureDescription:this.featureDescription ,description: this.description, image:this.image, price:this.price }
   }
 
 

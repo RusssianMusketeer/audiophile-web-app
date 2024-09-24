@@ -5,4 +5,5 @@ export interface StateProduct {
     price:number;
     quantity:number;
     featureDescription:string;
+    boxMaterial: object;
 }

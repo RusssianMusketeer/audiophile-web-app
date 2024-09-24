@@ -5,5 +5,6 @@ export interface Headphones {
     index: number | null;
     link : string;
     price: number;
-    featureDescription:string
+    featureDescription:string;
+    boxMaterial: object;
 }

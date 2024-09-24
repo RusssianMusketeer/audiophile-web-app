@@ -1,12 +1,17 @@
 
 <div class="flex justify-between max-w-6xl mx-auto p-8">
-    <div>
-    <h1 class="text-4xl font-semibold font-body mb-8">Features</h1>
+    <div class="w-[41rem]">
+    <h1 class="text-4xl font-semibold font-body mb-8 ">Features</h1>
     <p class="font-body opacity-50">
         {{ state.featureDescription }}
     </p>
     </div>
     <div>
         <h1 class="text-4xl font-semibold font-body mb-8">IN THE BOX</h1>
+        <div>
+            @for (material of state.boxMaterial ; track material.key) {
+                <div></div>
+              }
+        </div>
         </div>
 </div>
