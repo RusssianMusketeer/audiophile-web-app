@@ -1,11 +1,11 @@
-import { LocationStrategy } from '@angular/common';
+import { CommonModule, LocationStrategy } from '@angular/common';
 import { Component } from '@angular/core';
 import { StateProduct } from '../../../shared/models/productState.models';
 
 @Component({
   selector: 'app-features',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './features.component.html',
   styleUrl: './features.component.css'
 })
